@@ -32,4 +32,7 @@ export const Social = styled.div`
   height: 48px;
   border-radius: 50%;
   margin-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

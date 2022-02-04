@@ -1,28 +1,25 @@
 import { Button } from '../Button'
 import { Title } from '../Title'
 import { WrapperCenter } from '../WrapperCenter'
+import { SlideProps } from './interfaces'
 import * as S from './styles'
 
-export function SlideSection(): JSX.Element {
+export function Slide({
+  title,
+  description,
+  titleButton
+}: SlideProps): JSX.Element {
   return (
     <S.Container>
       <WrapperCenter>
         <S.Content>
           <S.InfoContainer>
             <Title>
-              <h3>
-                Aprimoramento
-                <br /> Constante
-              </h3>
+              <h3>{title}</h3>
             </Title>
-            <p>
-              Aprimoramento constante: este é o nosso lema profissional.
-              Buscamos evoluir nossa tecnologia e atendimento para garantir o
-              alto padrão de qualidade aliado ao comprometimento da empresa com
-              nossos clientes.
-            </p>
+            <p>{description}</p>
             <S.ButtonContainer>
-              <Button title="Desejo solicitar um orçamento agora" />
+              <Button title={titleButton} />
             </S.ButtonContainer>
           </S.InfoContainer>
           <S.ImageContainer>

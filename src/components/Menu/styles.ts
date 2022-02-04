@@ -1,10 +1,16 @@
 import styled from 'styled-components'
-export const Container = styled.div`
-  position: absolute;
+
+interface ContainerProps {
+  isOpen: boolean
+}
+export const Container = styled.nav<ContainerProps>`
+  position: fixed;
   top: 0;
   /* right: -222px; */
   right: 0;
   z-index: 5;
+  transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(222px)')};
+  transition: transform 0.3s ease-in-out;
 `
 export const Menu = styled.div`
   width: 216px;

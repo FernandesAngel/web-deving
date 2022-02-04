@@ -1,11 +1,11 @@
-import { MethdoCardProps } from './interfaces'
+import { MethodCardProps } from './interfaces'
 import * as S from './styles'
 
 export function MethodCard({
   image,
   title,
   description
-}: MethdoCardProps): JSX.Element {
+}: MethodCardProps): JSX.Element {
   return (
     <S.Container>
       <img src={image} />

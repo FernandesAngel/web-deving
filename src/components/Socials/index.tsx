@@ -1,4 +1,7 @@
+import Link from 'next/link'
 import { WrapperCenter } from '../WrapperCenter'
+import { FaFacebookF } from 'react-icons/fa'
+import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import * as S from './styles'
 
 export function Socials(): JSX.Element {
@@ -13,10 +16,34 @@ export function Socials(): JSX.Element {
             <p>Casos de sucesso, soluções inovadoras e informação</p>
           </S.TitleContainer>
           <S.SocialContainer>
-            <S.Social />
-            <S.Social />
-            <S.Social />
-            <S.Social />
+            <Link href="/">
+              <a>
+                <S.Social>
+                  <FaFacebookF size={22} />
+                </S.Social>
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <S.Social>
+                  <FaFacebookF size={22} />
+                </S.Social>
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <S.Social>
+                  <AiOutlineInstagram size={26} />
+                </S.Social>
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <S.Social>
+                  <AiOutlineTwitter size={26} />
+                </S.Social>
+              </a>
+            </Link>
           </S.SocialContainer>
         </S.Content>
       </WrapperCenter>

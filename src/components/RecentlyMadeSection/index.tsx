@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { AppTopic } from '../AppTopics'
+import { AppTopic } from '../AppTopic'
 import { Title } from '../Title'
 import { WrapperCenter } from '../WrapperCenter'
+import { appTopicsData } from './appTopicsData'
 import * as S from './styles'
 
 export function RecentlyMadeSection(): JSX.Element {
@@ -12,9 +13,15 @@ export function RecentlyMadeSection(): JSX.Element {
           <h4>Feitos Recentes</h4>
         </Title>
         <S.TopicsContainer>
-          <AppTopic />
-          <AppTopic />
-          <AppTopic />
+          {appTopicsData.map(topic => (
+            <AppTopic
+              key={topic.id}
+              title={topic.title}
+              type={topic.type}
+              description={topic.description}
+            />
+          ))}
+
           <S.MoreContainer>
             <S.Line />
             <Link href="/">

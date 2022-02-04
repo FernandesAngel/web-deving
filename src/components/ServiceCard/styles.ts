@@ -16,6 +16,10 @@ export const Container = styled.article`
 `
 export const ContainerImage = styled.div`
   margin-right: 80px;
+
+  @media (max-width: 800px) {
+    margin-right: 32px;
+  }
 `
 export const ContainerButton = styled.div`
   width: 24%;
@@ -23,6 +27,10 @@ export const ContainerButton = styled.div`
 
   bottom: 0;
   left: 0;
+
+  @media (max-width: 800px) {
+    width: 40%;
+  }
 `
 export const Content = styled.div`
   display: flex;
@@ -34,10 +42,18 @@ export const Content = styled.div`
   h3 {
     color: ${props => props.theme.colors.textDark700};
     font-size: 1.9rem;
+
+    @media (max-width: 800px) {
+      font-size: 1.8rem;
+    }
   }
   p {
     color: ${props => props.theme.colors.textDark600};
     font-size: 1.1rem;
     width: 60%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 `

@@ -2,20 +2,15 @@ import { MenuTopic } from '../MenuTopic'
 import * as S from './styles'
 import Hamburguer from '../../assets/hamburguer.svg'
 import { menuData } from './menuData'
-
-const deving = ['Sobre nós', 'Serviços', 'Solicite seu orçamento']
-const consultoria = [
-  'Entregamos soluções',
-  'Como funciona',
-  'Agende uma visita'
-]
-const metodo = ['Clareza na execução', 'Em 4 passos', 'Melhoria Constante']
-
+import Link from 'next/link'
+import { useState } from 'react'
 export function Menu(): JSX.Element {
+  const [isOpen, setIsOpen] = useState(false)
+  console.log('uau', isOpen)
   return (
-    <S.Container>
+    <S.Container isOpen={isOpen}>
       <S.Menu>
-        <S.BtnMenu type="button">
+        <S.BtnMenu type="button" onClick={() => setIsOpen(!isOpen)}>
           <Hamburguer />
         </S.BtnMenu>
         <S.Content>
@@ -34,10 +29,26 @@ export function Menu(): JSX.Element {
 
             <h2>Acompanhe nas redes</h2>
             <S.SocialMedia>
-              <S.SocialCircle></S.SocialCircle>
-              <S.SocialCircle></S.SocialCircle>
-              <S.SocialCircle></S.SocialCircle>
-              <S.SocialCircle></S.SocialCircle>
+              <Link href="/">
+                <a>
+                  <S.SocialCircle></S.SocialCircle>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <S.SocialCircle></S.SocialCircle>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <S.SocialCircle></S.SocialCircle>
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <S.SocialCircle></S.SocialCircle>
+                </a>
+              </Link>
             </S.SocialMedia>
           </S.Contacts>
         </S.Content>

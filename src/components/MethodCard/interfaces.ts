@@ -1,4 +1,4 @@
-export interface MethdoCardProps {
+export interface MethodCardProps {
   image: string
   title: string
   description: string

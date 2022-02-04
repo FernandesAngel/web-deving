@@ -73,6 +73,12 @@ export const Mark = styled.div`
   border-radius: 50%;
   margin-left: 5px;
 `
+export const TextAreaContainer = styled.div`
+  width: 100%;
+  textarea {
+    width: 100%;
+  }
+`
 
 export const InfoContainer = styled.div`
   background: ${props => props.theme.colors.backgroundSecondary};

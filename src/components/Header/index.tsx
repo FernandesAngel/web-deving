@@ -3,6 +3,7 @@ import LogoDeving from '../../assets/logoDeving.svg'
 import * as S from './styles'
 import Link from 'next/link'
 import { Button } from '../Button'
+import { Menu } from '../Menu'
 
 export function Header(): JSX.Element {
   return (
@@ -17,7 +18,7 @@ export function Header(): JSX.Element {
           </h1>
           <p className="subtitleText">
             Como desenvolvedora o trabalho da Deving é entregar ferramentas
-            digitais. Seja ela um site, <br /> um app ou um sistema integrado a
+            digitais. <br /> Seja ela um site, um app ou um sistema integrado a
             sua operação presencial.
           </p>
 
@@ -28,7 +29,7 @@ export function Header(): JSX.Element {
           <p className="quoteText">
             Ou <br /> solicite seu
             <Link href="/">
-              <a>orçamento</a>
+              <a> orçamento</a>
             </Link>
           </p>
         </S.Content>
@@ -36,6 +37,7 @@ export function Header(): JSX.Element {
       <S.ContainerLogo>
         <img src="/logo.png" alt="Deving" />
       </S.ContainerLogo>
+      <Menu />
     </S.ContainerHeader>
   )
 }

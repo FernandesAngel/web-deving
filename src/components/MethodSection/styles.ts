@@ -3,11 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.section`
   margin-top: 40px;
   background-color: ${props => props.theme.colors.backgroundTertiary};
-  min-height: 800px;
-  background-image: url('/doctor.png');
-  background-repeat: no-repeat;
-  background-size: 42%;
-  background-position: right bottom 38px;
   padding: 40px 0;
 `
 export const TitleContainer = styled.div``
@@ -25,6 +20,10 @@ export const Description = styled.div`
     margin-right: 120px;
     font-size: 1.125rem;
     color: ${props => props.theme.colors.textDark600};
+    @media (max-width: 800px) {
+      margin-right: 80px;
+      width: 50%;
+    }
   }
 `
 

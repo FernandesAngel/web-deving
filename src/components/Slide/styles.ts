@@ -12,6 +12,9 @@ export const Content = styled.div`
 export const InfoContainer = styled.div`
   margin-right: 240px;
   padding-top: 32px;
+  @media (max-width: 800px) {
+    margin-right: 80px;
+  }
   p {
     padding: 24px 0;
     width: 100%;

@@ -14,6 +14,10 @@ export const Depo = styled.div`
 export const DepoTitle = styled.div`
   flex-basis: 40%;
   margin-right: 80px;
+  @media (max-width: 800px) {
+    margin-right: 32px;
+    flex-basis: 42%;
+  }
   h5 {
     color: ${props => props.theme.colors.orange700};
     font-size: 1.5rem;
@@ -34,6 +38,9 @@ export const DepoCard = styled.div`
   height: 100%;
   border-radius: 16px;
   box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.05);
+  @media (max-width: 800px) {
+    padding: 24px;
+  }
 `
 export const DepoContent = styled.p`
   color: ${props => props.theme.colors.textDark600};
@@ -75,6 +82,9 @@ export const MoreContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 800px) {
+      width: 32%;
+    }
   }
 `
 export const Line = styled.div`
