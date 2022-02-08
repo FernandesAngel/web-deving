@@ -26,24 +26,26 @@ const Home: React.FC = () => {
   )
   return (
     <S.Container>
-      <Head>
-        <title>Página Home</title>
-      </Head>
-      <Header />
-      {/* <Menu /> */}
-      <ServicesSection />
-      <MethodSection />
-      <SlidesSection />
+      <S.ContentContainer>
+        <Head>
+          <title>Página Home</title>
+        </Head>
+        <Header />
+        {/* <Menu /> */}
+        <ServicesSection />
+        <MethodSection />
+        <SlidesSection />
 
-      <RecentlyMadeSection />
-      <Socials />
-      {showContactUs === 'contactus' && (
-        <ContactUs onShow={handleToggleContact} show={showContactUs} />
-      )}
-      {showContactUs === 'contactusv2' && (
-        <ContactUsV2 onShow={handleToggleContact} show={showContactUs} />
-      )}
-      <Footer />
+        <RecentlyMadeSection />
+        <Socials />
+        {showContactUs === 'contactus' && (
+          <ContactUs onShow={handleToggleContact} show={showContactUs} />
+        )}
+        {showContactUs === 'contactusv2' && (
+          <ContactUsV2 onShow={handleToggleContact} show={showContactUs} />
+        )}
+        <Footer />
+      </S.ContentContainer>
     </S.Container>
   )
 }

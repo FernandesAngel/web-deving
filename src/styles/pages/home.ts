@@ -5,6 +5,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+export const ContentContainer = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+`
 export const ContainerHeader = styled.div`
   width: 100%;
   height: 300px;

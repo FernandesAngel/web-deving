@@ -9,20 +9,32 @@ export const TitleContainer = styled.div``
 export const ContainerButton = styled.div`
   width: 40%;
   height: 40px;
+  @media (max-width: 540px) {
+    width: 100%;
+    margin: 20px 0;
+  }
 `
 export const Description = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 24px;
+  @media (max-width: 540px) {
+    flex-direction: column;
+    width: 100%;
+  }
   p {
     height: 120px;
     width: 40%;
     margin-right: 120px;
     font-size: 1.125rem;
     color: ${props => props.theme.colors.textDark600};
-    @media (max-width: 800px) {
+    @media (max-width: 860px) {
       margin-right: 80px;
       width: 50%;
+    }
+    @media (max-width: 540px) {
+      width: 100%;
+      height: 100%;
     }
   }
 `
@@ -39,4 +51,8 @@ export const MethodContainer = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 `

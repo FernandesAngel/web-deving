@@ -7,6 +7,9 @@ export const Form = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 `
 
 export const BoxTitleButton = styled.div`

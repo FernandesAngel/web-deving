@@ -6,15 +6,26 @@ export const Container = styled.section`
 export const TopicsContainer = styled.div`
   width: 100%;
   padding: 40px 56px;
+
+  @media (max-width: 540px) {
+    padding: 32px 24px;
+  }
 `
 export const Depo = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 `
 export const DepoTitle = styled.div`
   flex-basis: 40%;
   margin-right: 80px;
-  @media (max-width: 800px) {
+
+  @media (max-width: 540px) {
+    margin-bottom: 24px;
+  }
+  @media (max-width: 860px) {
     margin-right: 32px;
     flex-basis: 42%;
   }
@@ -38,7 +49,7 @@ export const DepoCard = styled.div`
   height: 100%;
   border-radius: 16px;
   box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.05);
-  @media (max-width: 800px) {
+  @media (max-width: 860px) {
     padding: 24px;
   }
 `
@@ -82,7 +93,7 @@ export const MoreContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: 800px) {
+    @media (max-width: 860px) {
       width: 32%;
     }
   }

@@ -74,7 +74,7 @@ export const ContainerButton = styled.div`
   width: 16%;
   height: 44px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 860px) {
     width: 24%;
   }
 `

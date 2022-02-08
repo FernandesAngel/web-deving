@@ -9,6 +9,11 @@ export const Container = styled.article`
   border-radius: 8px;
   margin-bottom: 8px;
   transition: box-shadow 0.4s;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+
   :hover {
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.1);
     background-color: ${props => props.theme.colors.backgroundSecondary};
@@ -17,8 +22,14 @@ export const Container = styled.article`
 export const ContainerImage = styled.div`
   margin-right: 80px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 860px) {
     margin-right: 32px;
+  }
+  @media (max-width: 640px) {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 `
 export const ContainerButton = styled.div`
@@ -28,7 +39,7 @@ export const ContainerButton = styled.div`
   bottom: 0;
   left: 0;
 
-  @media (max-width: 800px) {
+  @media (max-width: 860px) {
     width: 40%;
   }
 `
@@ -39,11 +50,16 @@ export const Content = styled.div`
   padding: 24px 0;
   justify-content: space-between;
 
+  @media (max-width: 640px) {
+    padding: 0;
+    padding-top: 16px;
+  }
+
   h3 {
     color: ${props => props.theme.colors.textDark700};
     font-size: 1.9rem;
 
-    @media (max-width: 800px) {
+    @media (max-width: 860px) {
       font-size: 1.8rem;
     }
   }
@@ -52,8 +68,12 @@ export const Content = styled.div`
     font-size: 1.1rem;
     width: 60%;
 
-    @media (max-width: 800px) {
+    @media (max-width: 860px) {
       width: 100%;
+    }
+
+    @media (max-width: 640px) {
+      margin: 16px 0;
     }
   }
 `

@@ -8,9 +8,21 @@ export const Content = styled.div`
   flex-direction: row;
   padding: 72px 0;
   justify-content: space-around;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 64px 0;
+  }
 `
 export const TitleContainer = styled.div`
   color: ${props => props.theme.colors.backgroundSecondary};
+
+  @media (max-width: 540px) {
+    margin-bottom: 24px;
+  }
 
   h3 {
     font-size: 2.6rem;
@@ -25,6 +37,10 @@ export const SocialContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  @media (max-width: 540px) {
+    width: 56%;
+    justify-content: space-between;
+  }
 `
 export const Social = styled.div`
   background: ${props => props.theme.colors.backgroundSecondary};
@@ -35,4 +51,8 @@ export const Social = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 540px) {
+    margin: 0;
+  }
 `

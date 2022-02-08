@@ -9,9 +9,7 @@ export function Footer(): JSX.Element {
         <WrapperCenter>
           <S.Content>
             <S.Title>
-              <h5>
-                Fique por <br /> dentro!
-              </h5>
+              <h5>Fique por dentro!</h5>
               <p>
                 Deving desenvolvedora de apps e ferramentas digitais faz <br />{' '}
                 parte do Grupo inGlobal,{' '}
