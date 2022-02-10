@@ -31,11 +31,11 @@ interface ButtonProps {
   active: boolean
 }
 export const Button = styled.button<ButtonProps>`
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
   border: 0;
   border-radius: 5px;
-  margin-left: ${props => (props.isMargin ? 8 : 0)}px;
+  margin-left: ${props => (props.isMargin ? 16 : 0)}px;
   outline: none;
   background: ${props =>
     props.active

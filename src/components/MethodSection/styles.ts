@@ -5,7 +5,13 @@ export const Container = styled.section`
   background-color: ${props => props.theme.colors.backgroundTertiary};
   padding: 40px 0;
 `
-export const TitleContainer = styled.div``
+export const TitleContainer = styled.div`
+  h3 {
+    @media (max-width: 540px) {
+      text-align: center;
+    }
+  }
+`
 export const ContainerButton = styled.div`
   width: 40%;
   height: 40px;
@@ -17,24 +23,15 @@ export const ContainerButton = styled.div`
 export const Description = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 24px;
-  @media (max-width: 540px) {
-    flex-direction: column;
-    width: 100%;
-  }
+  margin: 24px 0;
+  width: 100%;
   p {
-    height: 120px;
-    width: 40%;
-    margin-right: 120px;
+    width: 100%;
     font-size: 1.125rem;
     color: ${props => props.theme.colors.textDark600};
-    @media (max-width: 860px) {
-      margin-right: 80px;
-      width: 50%;
-    }
     @media (max-width: 540px) {
-      width: 100%;
-      height: 100%;
+      text-align: center;
+      margin: 0;
     }
   }
 `
@@ -47,6 +44,9 @@ export const MethodContainer = styled.div`
   backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 16px;
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
 `
 export const Content = styled.div`
   display: flex;

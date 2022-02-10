@@ -4,9 +4,15 @@ import Hamburguer from '../../assets/hamburguer.svg'
 import { menuData } from './menuData'
 import Link from 'next/link'
 import { useState } from 'react'
+import { FaFacebookF } from 'react-icons/fa'
+import {
+  AiOutlineInstagram,
+  AiOutlineTwitter,
+  AiFillLinkedin
+} from 'react-icons/ai'
 export function Menu(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)
-  console.log('uau', isOpen)
+
   return (
     <S.Container isOpen={isOpen}>
       <S.Menu>
@@ -31,22 +37,30 @@ export function Menu(): JSX.Element {
             <S.SocialMedia>
               <Link href="/">
                 <a>
-                  <S.SocialCircle></S.SocialCircle>
+                  <S.SocialCircle>
+                    <AiFillLinkedin size={19} />
+                  </S.SocialCircle>
                 </a>
               </Link>
               <Link href="/">
                 <a>
-                  <S.SocialCircle></S.SocialCircle>
+                  <S.SocialCircle>
+                    <FaFacebookF size={14} />
+                  </S.SocialCircle>
                 </a>
               </Link>
               <Link href="/">
                 <a>
-                  <S.SocialCircle></S.SocialCircle>
+                  <S.SocialCircle>
+                    <AiOutlineInstagram size={18} />
+                  </S.SocialCircle>
                 </a>
               </Link>
               <Link href="/">
                 <a>
-                  <S.SocialCircle></S.SocialCircle>
+                  <S.SocialCircle>
+                    <AiOutlineTwitter size={18} />
+                  </S.SocialCircle>
                 </a>
               </Link>
             </S.SocialMedia>

@@ -4,7 +4,7 @@ interface ContainerProps {
   isOpen: boolean
 }
 export const Container = styled.nav<ContainerProps>`
-  position: absolute;
+  position: fixed;
 
   top: 0;
   /* right: -222px; */
@@ -13,10 +13,13 @@ export const Container = styled.nav<ContainerProps>`
   transform: ${props => (props.isOpen ? 'translateX(0)' : 'translateX(222px)')};
   transition: transform 0.3s ease-in-out;
   background-color: green;
+  /* @media (max-width: 480px) {
+    position: fixed;
+  } */
 `
 export const Menu = styled.div`
   width: 216px;
-  height: 640px;
+  height: 100vh;
   background: ${props => props.theme.colors.backgroundSecondary};
   position: relative;
 
@@ -24,7 +27,7 @@ export const Menu = styled.div`
     content: '';
     background: ${props => props.theme.colors.backgroundSecondary};
     width: 100%;
-    height: 640px;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: -216px;
@@ -39,10 +42,19 @@ export const BtnMenu = styled.button`
   border-bottom-left-radius: 24px;
   border-top-left-radius: 24px;
   position: absolute;
-  top: 302px;
+  top: 45vh;
   left: -86px;
   z-index: 1000;
   outline: none;
+
+  @media (max-width: 540px) {
+    width: 68px;
+    left: -70px;
+  }
+  @media (max-width: 375px) {
+    width: 56px;
+    left: -57px;
+  }
 
   svg {
     position: absolute;
@@ -61,6 +73,10 @@ export const BtnMenu = styled.button`
     width: 40px;
     border-top-right-radius: 190px;
     box-shadow: 0 -25px 0 0 ${props => props.theme.colors.backgroundSecondary};
+
+    @media (max-width: 540px) {
+      width: 30px;
+    }
   }
 
   &:after {
@@ -74,6 +90,9 @@ export const BtnMenu = styled.button`
     border-top-right-radius: 190px;
     box-shadow: 0 -25px 0 0 ${props => props.theme.colors.backgroundSecondary};
     transform: rotateX(180deg);
+    @media (max-width: 540px) {
+      width: 30px;
+    }
   }
 `
 export const Content = styled.div`
@@ -111,6 +130,8 @@ export const SocialCircle = styled.div`
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: ${props => props.theme.colors.textDark600};
   margin: 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

@@ -25,6 +25,10 @@ export const TitleWrapper = styled.div`
     @media (max-width: 860px) {
       margin-right: 40px;
     }
+    @media (max-width: 540px) {
+      text-align: center;
+      margin: 0;
+    }
     @media (max-width: 640px) {
       margin-bottom: 24px;
     }
@@ -36,6 +40,9 @@ export const TitleWrapper = styled.div`
     color: ${props => props.theme.colors.textDark600};
     @media (max-width: 860px) {
       flex-basis: 55%;
+    }
+    @media (max-width: 540px) {
+      text-align: center;
     }
     a {
       font-weight: 700;

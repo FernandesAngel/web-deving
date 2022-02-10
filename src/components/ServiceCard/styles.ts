@@ -48,7 +48,7 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 24px 0;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media (max-width: 640px) {
     padding: 0;

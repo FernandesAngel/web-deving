@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin: 48px 0;
+  padding: 48px 0;
 `
 export const Form = styled.form`
   display: flex;
@@ -31,11 +31,11 @@ interface ButtonProps {
   active: boolean
 }
 export const Button = styled.button<ButtonProps>`
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
   border: 0;
   border-radius: 5px;
-  margin-left: ${props => (props.isMargin ? 8 : 0)}px;
+  margin-left: ${props => (props.isMargin ? 16 : 0)}px;
   outline: none;
   background: ${props =>
     props.active

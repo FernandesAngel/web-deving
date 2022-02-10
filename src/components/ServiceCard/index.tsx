@@ -15,9 +15,9 @@ export function ServiceCard({
       <S.Content>
         <h3>{title}</h3>
         <p>{subtitle}</p>
-        <S.ContainerButton>
+        {/* <S.ContainerButton>
           <Button title="Mais Serviços" />
-        </S.ContainerButton>
+        </S.ContainerButton> */}
       </S.Content>
     </S.Container>
   )

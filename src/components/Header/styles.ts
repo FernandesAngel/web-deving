@@ -59,6 +59,9 @@ export const Content = styled.div`
   .subtitleText {
     font-size: 16px;
     margin: 48px 0;
+    @media (max-width: 480px) {
+      margin: 64px 0;
+    }
   }
 
   .quoteText {
@@ -76,5 +79,8 @@ export const ContainerButton = styled.div`
 
   @media (max-width: 860px) {
     width: 24%;
+  }
+  @media (max-width: 480px) {
+    width: 32%;
   }
 `

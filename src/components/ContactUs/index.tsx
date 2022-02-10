@@ -78,11 +78,11 @@ export function ContactUs({ onShow, show }: ContactUsProps): JSX.Element {
   }, [name, phone, email, tech, budget, deadline])
 
   const handleSubmitForm = useCallback(async data => {
-    console.log('data', data)
+    // console.log('data', data)
   }, [])
 
   return (
-    <S.Container>
+    <S.Container id="contact">
       <WrapperCenter>
         <S.Form onSubmit={handleSubmit(handleSubmitForm)}>
           <S.ContentForm>
@@ -93,13 +93,13 @@ export function ContactUs({ onShow, show }: ContactUsProps): JSX.Element {
                   isMargin={false}
                   active={show === 'contactus'}
                   onClick={() => onShow('contactus')}>
-                  <HiOutlineClipboardList size={16} />
+                  <HiOutlineClipboardList size={20} />
                 </S.Button>
                 <S.Button
                   isMargin
                   active={show === 'contactusv2'}
                   onClick={() => onShow('contactusv2')}>
-                  <AiOutlineMail size={16} />
+                  <AiOutlineMail size={19} />
                 </S.Button>
               </S.BoxButton>
             </S.BoxTitleButton>

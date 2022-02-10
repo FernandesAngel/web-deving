@@ -41,6 +41,9 @@ export const SocialContainer = styled.div`
     width: 56%;
     justify-content: space-between;
   }
+  @media (max-width: 480px) {
+    width: 72%;
+  }
 `
 export const Social = styled.div`
   background: ${props => props.theme.colors.backgroundSecondary};

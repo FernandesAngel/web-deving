@@ -28,7 +28,7 @@ export function Header(): JSX.Element {
 
           <p className="quoteText">
             Ou <br /> solicite seu
-            <Link href="/">
+            <Link href="/#contact">
               <a> orçamento</a>
             </Link>
           </p>

@@ -96,6 +96,9 @@ export const MoreContainer = styled.div`
     @media (max-width: 860px) {
       width: 32%;
     }
+    @media (max-width: 480px) {
+      width: 48%;
+    }
   }
 `
 export const Line = styled.div`

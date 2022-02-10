@@ -19,9 +19,9 @@ export function MethodSection(): JSX.Element {
               permite identificar as questões e oportunidade de cada projeto de
               maneira clara. Dividimos o processo em 4 Fases:
             </p>
-            <S.ContainerButton>
+            {/* <S.ContainerButton>
               <Button title="Saiba Mais sobre nosso método" />
-            </S.ContainerButton>
+            </S.ContainerButton> */}
           </S.Description>
         </S.TitleContainer>
         <S.MethodContainer>
