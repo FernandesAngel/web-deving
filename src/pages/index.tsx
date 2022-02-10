@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Head from 'next/head'
 import * as S from '../styles/pages/home'
 import { Header } from '../components/Header'
@@ -14,6 +14,7 @@ import { ContactUsV2 } from '../components/ContactUsV2'
 import { SlidesSection } from '../components/SlidesSection'
 
 const Home: React.FC = () => {
+  const hasWindow = typeof window !== undefined
   const [showContactUs, setShowContactUs] = useState<
     'contactus' | 'contactusv2'
   >('contactus')
@@ -24,6 +25,10 @@ const Home: React.FC = () => {
     },
     []
   )
+
+  useEffect(() => {
+    console.log('ksnjkdnk', document.documentElement.scrollHeight)
+  }, [])
   return (
     <S.Container>
       <S.ContentContainer>
@@ -31,7 +36,6 @@ const Home: React.FC = () => {
           <title>Página Home</title>
         </Head>
         <Header />
-        {/* <Menu /> */}
         <ServicesSection />
         <MethodSection />
         <SlidesSection />

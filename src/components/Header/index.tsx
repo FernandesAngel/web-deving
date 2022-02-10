@@ -1,11 +1,14 @@
 import { WrapperCenter } from '../WrapperCenter'
-import LogoDeving from '../../assets/logoDeving.svg'
 import * as S from './styles'
-import Link from 'next/link'
 import { Button } from '../Button'
 import { Menu } from '../Menu'
-
+import Link from 'next/link'
+import { scrollTo } from '../../utils/scroll'
+import { useCallback } from 'react'
+import { useRouter } from 'next/router'
 export function Header(): JSX.Element {
+  const route = useRouter()
+
   return (
     <S.ContainerHeader>
       <WrapperCenter>
@@ -23,12 +26,16 @@ export function Header(): JSX.Element {
           </p>
 
           <S.ContainerButton>
-            <Button bg="secondary" title="Saiba Mais" />
+            <Button
+              bg="secondary"
+              title="Saiba Mais"
+              onClick={() => route.push('#services')}
+            />
           </S.ContainerButton>
 
           <p className="quoteText">
             Ou <br /> solicite seu
-            <Link href="/#contact">
+            <Link href="#contactus" passHref>
               <a> orçamento</a>
             </Link>
           </p>

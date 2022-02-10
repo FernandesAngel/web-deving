@@ -82,7 +82,7 @@ export function ContactUs({ onShow, show }: ContactUsProps): JSX.Element {
   }, [])
 
   return (
-    <S.Container id="contact">
+    <S.Container id="contactus">
       <WrapperCenter>
         <S.Form onSubmit={handleSubmit(handleSubmitForm)}>
           <S.ContentForm>

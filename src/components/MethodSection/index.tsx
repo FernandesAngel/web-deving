@@ -6,7 +6,7 @@ import * as S from './styles'
 
 export function MethodSection(): JSX.Element {
   return (
-    <S.Container>
+    <S.Container id="methods">
       <WrapperCenter>
         <S.TitleContainer>
           <Title>

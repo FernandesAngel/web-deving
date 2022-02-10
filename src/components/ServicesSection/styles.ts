@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  margin-top: 80px;
+  padding-top: 80px;
 `
 export const TitleWrapper = styled.div`
   display: flex;

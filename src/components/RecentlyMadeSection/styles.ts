@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   padding-bottom: 40px;
+  padding-top: 32px;
 `
 export const TopicsContainer = styled.div`
   width: 100%;

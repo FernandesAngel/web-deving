@@ -1,17 +1,22 @@
 export const menuData = [
   {
     id: 1,
-    title: 'Deving',
-    list: ['Sobre nós', 'Serviços', 'Solicite seu orçamento']
+    topic: 'Serviços',
+    link: 'services'
   },
   {
     id: 2,
-    title: 'Consultoria',
-    list: ['Entregamos soluções', 'Como funciona', 'Agende uma visita']
+    topic: 'Método',
+    link: 'methods'
   },
   {
     id: 3,
-    title: 'Método',
-    list: ['Clareza na execução', 'Em 4 passos', 'Melhoria Constante']
+    topic: 'Feitos Recentes',
+    link: 'recentlymade'
+  },
+  {
+    id: 4,
+    topic: 'Fale Conosco',
+    link: 'contactus'
   }
 ]

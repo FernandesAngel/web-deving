@@ -23,6 +23,7 @@ export function SlidesSection(): JSX.Element {
             title={slide.title}
             titleButton={slide.titleButton}
             description={slide.description}
+            linkButton={slide.linkButton}
           />
         ))}
       </Slider>

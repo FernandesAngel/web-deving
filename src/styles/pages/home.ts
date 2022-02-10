@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 `
 
 export const ContentContainer = styled.div`

@@ -6,6 +6,9 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   @media(max-width: 1440px){
     html {
       font-size: 76.75%;
@@ -39,7 +42,12 @@ export default createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-  .black-background {
-    background-color: #6840dc;
-  }
+
+  .scroll-container {
+    display: block;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+
 `

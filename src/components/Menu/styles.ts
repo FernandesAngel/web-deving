@@ -97,6 +97,17 @@ export const BtnMenu = styled.button`
 `
 export const Content = styled.div`
   padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+export const ContentTopics = styled.div`
+  h1 {
+    font-size: 1.6rem;
+    margin: 40px 0 10px;
+    font-weight: 700;
+  }
 `
 export const ContainerLogo = styled.div`
   margin-bottom: 20px;

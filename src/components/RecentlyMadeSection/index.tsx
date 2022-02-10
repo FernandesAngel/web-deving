@@ -7,7 +7,7 @@ import * as S from './styles'
 
 export function RecentlyMadeSection(): JSX.Element {
   return (
-    <S.Container>
+    <S.Container id="recentlymade">
       <WrapperCenter>
         <Title>
           <h4>Feitos Recentes</h4>

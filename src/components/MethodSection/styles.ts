@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  margin-top: 40px;
+  padding-top: 40px;
   background-color: ${props => props.theme.colors.backgroundTertiary};
   padding: 40px 0;
 `

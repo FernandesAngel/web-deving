@@ -3,15 +3,22 @@ import * as S from './styles'
 import Hamburguer from '../../assets/hamburguer.svg'
 import { menuData } from './menuData'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { FaFacebookF } from 'react-icons/fa'
 import {
   AiOutlineInstagram,
   AiOutlineTwitter,
   AiFillLinkedin
 } from 'react-icons/ai'
+import { useRouter } from 'next/router'
 export function Menu(): JSX.Element {
+  const route = useRouter()
   const [isOpen, setIsOpen] = useState(false)
+
+  const handleNavigationMenu = useCallback((link: string) => {
+    setIsOpen(false)
+    route.push(`#${link}`)
+  }, [])
 
   return (
     <S.Container isOpen={isOpen}>
@@ -20,14 +27,21 @@ export function Menu(): JSX.Element {
           <Hamburguer />
         </S.BtnMenu>
         <S.Content>
-          <S.ContainerLogo>
-            <img src="/logoBlack.png" alt="Deving" />
-          </S.ContainerLogo>
+          <S.ContentTopics>
+            <S.ContainerLogo>
+              <img src="/logoBlack.png" alt="Deving" />
+            </S.ContainerLogo>
 
-          {menuData.map(d => (
-            <MenuTopic key={d.id} title={d.title} topics={d.list} />
-          ))}
+            <h1>Deving</h1>
 
+            {menuData.map(d => (
+              <MenuTopic
+                key={d.id}
+                topic={d.topic}
+                onClick={() => handleNavigationMenu(d.link)}
+              />
+            ))}
+          </S.ContentTopics>
           <S.Contacts>
             <h1>Atendimento</h1>
             <p>+55 (11) 90000-0000</p>
